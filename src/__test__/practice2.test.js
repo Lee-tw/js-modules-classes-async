@@ -21,7 +21,7 @@ test("functions on kevin and winnie expected", () => {
 
 test("this is consistent for study function", () => {
   global.console.log = jest.fn();
-  const { study } = winnie
+  const { study } = winnie      // 对象解构，将winnie里面的stydy()方法赋给study
   study()
   expect(global.console.log).toBeCalledWith("Winnie is studying in class1");
 });
